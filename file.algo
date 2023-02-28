@@ -1,0 +1,17 @@
+ALGORITHM sort
+VAR
+    i: INTEGER;
+    currentIndex: INTEGER;
+    j: INTEGER;
+BEGIN
+    FOR i FROM 1 TO ARRAY_OF type[length]; DO
+        currentIndex = array[i];
+        j = i - 1;
+        WHILE (j >= 0 && array[j] > currentIndex) DO
+            array[j + 1] = array[j];
+            j--;
+        END_WHILE
+        array[j + 1] = currentIndex;
+    END_FOR
+    RETURN array;
+END
